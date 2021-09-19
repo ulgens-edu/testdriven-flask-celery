@@ -6,11 +6,28 @@ authors = ["Ülgen Sarıkavak <ulgensrkvk@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dev-dependencies]
+black = "21.9b0"
 
 [tool.poetry.dependencies]
 python = "3.9.7"
 
-
 [build-system]
 requires = ["poetry-core>=1.1.8"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ["py39"]
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
