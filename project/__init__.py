@@ -23,6 +23,11 @@ def create_app(config_name=None):
     db.init_app(app)
     migrate.init_app(app, db)
 
+    # Register blueprints
+    from project.users import users_blueprint
+
+    app.register_blueprint(users_blueprint)
+
     # Shell context for Flask CLI
     @app.shell_context_processor
     def ctx():
