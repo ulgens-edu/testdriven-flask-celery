@@ -204,6 +204,23 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "flask-celeryext"
+version = "0.3.4"
+description = "Flask-CeleryExt is a simple integration layer between Celery and Flask."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+celery = {version = ">=4.3", markers = "python_version >= \"3.7\""}
+Flask = ">=0.10"
+
+[package.extras]
+all = ["Sphinx (>=1.4.2)", "check-manifest (>=0.25)", "coverage (>=4.0)", "isort (>=4.3.4)", "pydocstyle (>=1.0.0)", "pytest-cache (>=1.0)", "pytest-cov (>=1.8.0)", "pytest-pep8 (>=1.0.6)", "pytest (>=2.8.0)", "pytest-mock (>=1.6.0)"]
+docs = ["Sphinx (>=1.4.2)"]
+tests = ["check-manifest (>=0.25)", "coverage (>=4.0)", "isort (>=4.3.4)", "pydocstyle (>=1.0.0)", "pytest-cache (>=1.0)", "pytest-cov (>=1.8.0)", "pytest-pep8 (>=1.0.6)", "pytest (>=2.8.0)", "pytest-mock (>=1.6.0)"]
+
+[[package]]
 name = "flask-migrate"
 version = "3.1.0"
 description = "SQLAlchemy database migrations for Flask applications using Alembic."
@@ -645,7 +662,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "3.9.7"
-content-hash = "f00d5194a03769c5f8652245a7dda043161ea4fd78891089a382cbef82354d6a"
+content-hash = "ee2ebbb05351f1b128cae6b8365c376dc1d8fe3297361fa111770b94e83fda3d"
 
 [metadata.files]
 alembic = [
@@ -702,6 +719,10 @@ decorator = [
 flask = [
     {file = "Flask-2.0.1-py3-none-any.whl", hash = "sha256:a6209ca15eb63fc9385f38e452704113d679511d9574d09b2cf9183ae7d20dc9"},
     {file = "Flask-2.0.1.tar.gz", hash = "sha256:1c4c257b1892aec1398784c63791cbaa43062f1f7aeb555c4da961b20ee68f55"},
+]
+flask-celeryext = [
+    {file = "Flask-CeleryExt-0.3.4.tar.gz", hash = "sha256:47d5d18daebad300b215faca0d1c6da24625f333020482e27591634c05792c98"},
+    {file = "Flask_CeleryExt-0.3.4-py2.py3-none-any.whl", hash = "sha256:1c84b35462d41d1317800d256b2ce30031b7d3d20dd8dc680ce4f4cc88029867"},
 ]
 flask-migrate = [
     {file = "Flask-Migrate-3.1.0.tar.gz", hash = "sha256:57d6060839e3a7f150eaab6fe4e726d9e3e7cffe2150fb223d73f92421c6d1d9"},
