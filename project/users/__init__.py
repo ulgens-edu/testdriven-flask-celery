@@ -7,4 +7,4 @@ users_blueprint = Blueprint(
     template_folder="templates",
 )
 
-from . import models  # noqa
+from . import models, tasks  # noqa
